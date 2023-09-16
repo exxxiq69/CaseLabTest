@@ -81,7 +81,7 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-color: #005a9c;
+  background-color: #5b0763;
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -227,14 +227,14 @@ ul.checkboxes li div div {
 }
 
 .deleteElement:hover {
-  color: coral;
+  color: rgb(240, 15, 26);
 }
 .completedTodo {
   color: black;
 }
 
 .completedTodo:hover {
-  color: rgb(230, 86, 235);
+  color: rgb(12, 253, 64);
 }
 
 .even {
@@ -245,7 +245,7 @@ ul.checkboxes li div div {
   box-shadow: 0 0 0 2px #394263;
 }
 .odd {
-  background-color: rgb(104, 175, 247);
+  background-color: rgb(172, 53, 241);
 }
 
 .odd input[type="checkbox"] {
