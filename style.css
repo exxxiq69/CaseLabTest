@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="checkbox"] {
+  
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #005a9c;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  display: inline-flex;
+  transition-property: background-color, border-color, color, fill, stroke;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  height: 2.5rem;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.action-button {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style the input */
+input[type="text"] {
+  outline: none;
+  border-radius: 0.375rem;
+  margin: 0;
+  border: none;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 0.7rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 2px #c5c7ce;
+}
+input[type="checkbox"]:hover {
+  box-shadow: #005a9c 0px 0px 0px 2px;
+}
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 2px #fff;
+  background-color: #fff;
+  border-width: 0;
+}
+input[type="checkbox"]:checked:hover {
+  box-shadow: #005a9c 0px 0px 0px 2px;
+  background-color: #fff;
+  border-width: 0;
+}
+input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #37991e;
+  border-radius: 0.1rem;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #b46161;
+  color: #2e2d2d;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+ul.checkboxes {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+ul.checkboxes li {
+  list-style: none;
+  margin: 1px;
+  padding: 0;
+}
+ul.checkboxes li label {
+  line-height: 200%;
+  font-size: 20px;
+  cursor: pointer;
+  flex-grow: 1;
+  margin: 0;
+}
+
+ul.checkboxes li.div {
+  display: flex;
+}
+ul.checkboxes li div div {
+  text-align: right;
+}
+
+.deleteElement {
+  color: black;
+}
+
+.deleteElement:hover {
+  color: coral;
+}
+.completedTodo {
+  color: black;
+}
+
+.completedTodo:hover {
+  color: rgb(230, 86, 235);
+}
+
+.even {
+  background-color: rgb(206, 247, 61);
+}
+
+.even input[type="checkbox"] {
+  box-shadow: 0 0 0 2px #394263;
+}
+.odd {
+  background-color: rgb(104, 175, 247);
+}
+
+.odd input[type="checkbox"] {
+  box-shadow: 0 0 0 2px #192035;
+}
+
+[aria-completed="true"] label {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+[role="checkbox"] {
+  width: 100%;
+  display: flex;
+  padding: 4px 8px;
+  border: 2px solid transparent;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+[role="checkbox"]:focus,
+[role="checkbox"]:hover {
+  padding-left: 12px;
+  border: 2px solid #34f7b6;
+  border-radius: 5px;
+  background-color: #def;
+}
+
+[role="checkbox"]:hover {
+  cursor: pointer;
+}
